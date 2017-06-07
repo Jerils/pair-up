@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <h1>List of Users</h1></br>
+    <% @users.each do |user| %>
+    <p>Email: <%= user.email %> Admin: <%= user.admin %> <%= link_to " Promote" %></p>
+    <% end %>
+
+  </div>
+</div>
