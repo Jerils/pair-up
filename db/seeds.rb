@@ -8,11 +8,13 @@
 
 User.destroy_all
 
-jeroen = User.create(email: "jeroen@pairup.com", password: "abcd1234")
-job = User.create(email: "job@pairup.com", password: "abcd1234")
-tim = User.create(email: "tim@pairup.com", password: "abcd1234")
-ilsmarie = User.create(email: "ilsmarie@pairup.com", password: "abcd1234")
-han = User.create(email: "han@pairup.com", password: "abcd1234")
-steve = User.create(email: "steve@pairup.com", password: "abcd1234")
-ann = User.create(email: "ann@pairup.com", password: "abcd1234")
-bram = User.create(email: "bram@pairup.com", password: "abcd1234")
+jeroen = User.create!(email: "jeroen@pairup.com", password: "abcd1234", admin: false)
+job = User.create!(email: "job@pairup.com", password: "abcd1234", admin: false)
+tim = User.create(email: "tim@pairup.com", password: "abcd1234", admin: false)
+ilsmarie = User.create!(email: "ilsmarie@pairup.com", password: "abcd1234", admin: false)
+han = User.create!(email: "han@pairup.com", password: "abcd1234", admin: false)
+steve = User.create!(email: "steve@pairup.com", password: "abcd1234", admin: false)
+ann = User.create!(email: "ann@pairup.com", password: "abcd1234", admin: false)
+bram = User.create!(email: "bram@pairup.com", password: "abcd1234", admin: false)
+
+arno = User.create!(email: "arno@pairup.com", password: "abcd1234", admin: true)
