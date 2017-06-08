@@ -1,20 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <h1>Welcome to PairUp</h1><br><br>
-
-      <!-- <% if !user_signed_in? %>
-      <p>Please log in</p>
-      <% else %>
-      <%= link_to "All students", users_path, class: "btn btn-primary" %>
-      <% end %> -->
       <% if !user_signed_in? %>
       <p>Please log in</p>
       <% else %>
         <% if current_user.admin == true %>
-          <p>ADMIN</p>
+          <%= render 'admins/user_list' %>
+          <%= render 'admins/new_matches' %>
+          <%= render 'admins/past_matches' %>
         <% else %>
-          <p>STUDENT</p>
+          <%= render 'students/user_list' %>
+          <%= render 'students/new_matches' %>
+          <%= render 'students/past_matches' %>
         <% end %>
       <% end %>
     </div>
