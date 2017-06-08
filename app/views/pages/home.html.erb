@@ -3,10 +3,19 @@
     <div class="col-md-4">
       <h1>Welcome to PairUp</h1><br><br>
 
-      <% if !user_signed_in? %>
+      <!-- <% if !user_signed_in? %>
       <p>Please log in</p>
       <% else %>
       <%= link_to "All students", users_path, class: "btn btn-primary" %>
+      <% end %> -->
+      <% if !user_signed_in? %>
+      <p>Please log in</p>
+      <% else %>
+        <% if current_user.admin == true %>
+          <p>ADMIN</p>
+        <% else %>
+          <p>STUDENT</p>
+        <% end %>
       <% end %>
     </div>
   </div>
