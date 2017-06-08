@@ -9,12 +9,25 @@
         <div class="user-avatar-big">
       <p><%= image_tag current_user.avatar %></p>
         </div>
+        <div class="user-avatar-big">
+          <% @users.shuffle.first(@users.length / 2).each do |a, b| %>
+          <% end %>
+          <% slice_size = 2 %>
+          <% @users.each_slice(slice_size) do |slice| %>
+          <% slice.each do |a,b| %>
+          <%= image_tag a.avatar %>
+          <% end %>
+          <% end %>
+      </div>
     </div>
     <div class="col-md-2"></div>
     <div class="col-md-4">
-          <% @users.shuffle.take(1).each do |user| %>
-          <%= image_tag user.avatar, class:"user-avatar-big"%>
-          <% end %>
+        <div class="user-avatar-big">
+        <% @users.shuffle.each do |array| %>
+          <%= image_tag array.avatar, class: "user-avatar-big" %>
+        <% end %>
+      </div>
+
     </div>
     <div class="col-md-2"></div>
   </div>
