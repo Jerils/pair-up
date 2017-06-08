@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Students</h1></br>
+      <% User.all.each do |user| %>
+        <% if user.admin != true %>
+          <div class="user-list">
+            <div class="user-avatar">
+              <p><%= image_tag user.avatar %></p>
+            </div>
+            <div class= "user-data">
+              <h4><%= user.name %></h4>
+              <p>Admin: <%= user.admin %> <%= link_to " Promote" %></p>
+              <p>Email: <%= user.email %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <h1>Staff</h1></br>
+      <% User.all.each do |user| %>
+        <% if user.admin == true %>
+        <div class="user-list">
+          <div class="user-avatar">
+            <p><%= image_tag user.avatar %></p>
+          </div>
+          <div class= "user-data">
+            <h4><%= user.name %></h4>
+            <p>Admin: <%= user.admin %> <%= link_to " Promote" %></p>
+            <p>Email: <%= user.email %></p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

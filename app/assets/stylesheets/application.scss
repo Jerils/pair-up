@@ -16,3 +16,25 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.user-avatar img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-self: baseline;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  line-height: 60%;
+}
