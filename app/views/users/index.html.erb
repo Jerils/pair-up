@@ -3,9 +3,11 @@
     <div class="col-md-4">
       <h1>All students</h1></br>
       <% @users.each do |user| %>
-      <p>Email: <%= user.email %> Admin: <%= user.admin %> <%= link_to " Promote" %></p>
+      <p>E-mail <%= user.email %> |  <%= link_to "Promote to Admin" %> </p>
       <% end %>
+      </ul>
     </div>
+
 
     <div class="col-md-4">
       <h1>Pairs: today</h1></br>
@@ -14,8 +16,17 @@
       <% end %>
     </div>
 
+    <% if !user_signed_in? %>
+    <p>Please log in</p>
+    <% else %>
+    <%= link_to "All students", users_path, class: "btn btn-primary" %>
+    <% end %>
+
     <div class="col-md-4">
-      <h1>Pairs: tomorrow</h1></br>
+      <h1>Pairs</h1></br>
+      <% @users.shuffle.each do |user| %>
+      <%= user.email %>
+      <% end %>
     </div>
   </div>
 </div>
