@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class ="image-header">
+    <img src = "https://eyeondesign.aiga.org/wp-content/uploads/2017/03/Tinder-its-a-match-typography-aiga.png">
+  </div>
+  </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <div class="user-avatar-big">
+      <p><%= image_tag current_user.avatar %></p>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+          <% @users.shuffle.take(1).each do |user| %>
+          <%= image_tag user.avatar, class:"user-avatar-big"%>
+          <% end %>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
