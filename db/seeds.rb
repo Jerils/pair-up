@@ -32,6 +32,7 @@ valerie = User.create(name: "Valerie", email: "valerie@pairup.com", password: "a
 michel = User.create(name: "Michel", email: "michel@pairup.com", password: "abcd1234", admin: false, avatar:"http://res.cloudinary.com/thkodaisseur/image/upload/v1496909988/Pair-Up/michel.jpg")
 lieke = User.create(name: "Lieke", email: "lieke@pairup.com", password: "abcd1234", admin: false, avatar:"http://res.cloudinary.com/thkodaisseur/image/upload/v1496909987/Pair-Up/lieke.jpg")
 michiel = User.create(name: "Michiel", email: "michiel@pairup.com", password: "abcd1234", admin: false, avatar:"http://res.cloudinary.com/thkodaisseur/image/upload/v1496910850/Pair-Up/michiel.png")
+rubberducky = User.create(name: "Rubber Ducky", email: "rubberducky@pairup.com", password: "abcd1234", admin: false, avatar:"http://res.cloudinary.com/thkodaisseur/image/upload/v1496912501/Pair-Up/rubberducky.jpg")
 
 
 # Teachers / staff
