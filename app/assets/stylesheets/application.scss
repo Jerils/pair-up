@@ -33,8 +33,32 @@
 .user-data {
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content:center;
   margin-left: 20px;
   margin-bottom: 10px;
   line-height: 60%;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.promote {
+  height: 40px;
+}
+
+.demote {
+  height: 40px;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 125px;
+  width: auto;
+  // padding: 0px;
+  width: auto;
 }
