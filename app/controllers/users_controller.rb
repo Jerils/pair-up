@@ -13,6 +13,16 @@ class UsersController < ApplicationController
   #   @user.toggle!(:enabled)
   # end
 
+  def promote
+    @user = User.find(params[:id])
+    if @user.admin?
+      @user.toggle!(:admin)
+      flash[:success] = "User is promoted to admin."
+    else
+      flash[:notice] = "Admins can't demote other admins."
+    end
+end
+
   def update
       @user = User.find(params[:id])
 

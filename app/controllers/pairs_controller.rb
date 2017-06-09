@@ -3,7 +3,20 @@ class PairsController < ApplicationController
   def index
   @pair = Pair.new
   @users = User.all
+
   end
+
+  def create
+  @pair = Pair.new(params[:user])
+
+  Pair.create(first_student: user1, second_student: user2)
+  Pair.count(:second_user_id).where(first_student: user1)
+end
+
+
+
+
+
 end
 
   #
