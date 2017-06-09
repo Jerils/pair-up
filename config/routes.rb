@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, :only => [:show]
+  resources :pairs
   get "users" => 'users#index', as: :users
 
   resources :users do

@@ -23,6 +23,12 @@
   border-radius: 50%;
 }
 
+.user-avatar-big img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 .user-list {
   display: flex;
   flex-direction: row;
@@ -61,4 +67,8 @@
   width: auto;
   // padding: 0px;
   width: auto;
+}
+
+.image-header {
+  text-align: center;
 }
