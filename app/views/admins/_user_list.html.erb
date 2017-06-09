@@ -15,10 +15,7 @@
                 <p>Email: <%= user.email %></p>
               </div>
             </div>
-            <!-- <td class="user-<%= user.id %>">
-              <%= link_to "#{ user.admin ? 'Enabled' : 'Disabled' }", toggle_admin_status_user_path(user), method: :patch, remote: :true, class: "btn btn-xs btn-#{ user.admin ? 'success' : 'warning' }"  %>
-            </td> -->
-            <button type="button" class="btn btn-danger promote">Promote</button>
+            <%= link_to "Promote", user, method: :promote, data: { confirm: "You sure?" },  class: "btn btn-danger promote" %>
           </div>
         <% end %>
       <% end %>
